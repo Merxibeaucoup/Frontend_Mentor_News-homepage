@@ -1,0 +1,38 @@
+//Font variables
+$font-primary: "Inter", sans-serif;
+
+// Color Variables Primary
+$color-primary-orange: #e9ab53;
+$color-primary-red: #f15e50;
+
+// Color Variables Neutral
+$color-neutral-white: #fffdfa;
+$color-neutral-grayish-blue: #c5c6ce;
+$color-neutral-dark-grayish-blue: #5d5f79;
+$color-neutral-very-dark-blue: #00001a;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-neutral-white;
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.App {
+  padding: 5rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}

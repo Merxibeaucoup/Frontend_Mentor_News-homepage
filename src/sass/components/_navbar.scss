@@ -1,0 +1,28 @@
+.navbar {
+  grid-column: 1/ -1;
+  padding: 3rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+
+    li {
+      color: $color-neutral-dark-grayish-blue;
+      padding: 1rem;
+      cursor: pointer;
+      transition: 0.4s all;
+
+      &:hover,
+      &:active {
+        color: $color-primary-red;
+      }
+    }
+  }
+}

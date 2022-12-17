@@ -1,0 +1,45 @@
+.steps {
+  margin-top: 5rem;
+  grid-column: 1/-1;
+
+  display: flex;
+  gap: 2rem;
+
+  &__image {
+    grid-column: 1/2;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__words {
+    grid-column: 2/-1;
+    h2 {
+      font-size: 4rem;
+      color: $color-neutral-grayish-blue;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: $color-neutral-very-dark-blue;
+      margin-bottom: 1rem;
+      transition: 0.4s all;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        color: $color-primary-red;
+      }
+    }
+    p {
+      color: $color-neutral-dark-grayish-blue;
+      line-height: 1.2;
+    }
+  }
+}
+
+.div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
