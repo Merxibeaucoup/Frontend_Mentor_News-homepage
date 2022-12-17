@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <aside className="sidebar">
       <h2 className="sidebar__header">New</h2>
 
       <div className="sidebar__content">
@@ -29,7 +29,7 @@ const Sidebar = () => {
           that means.
         </p>
       </div>
-    </div>
+    </aside>
   );
 };
 
