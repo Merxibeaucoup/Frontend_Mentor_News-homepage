@@ -31,6 +31,7 @@ body {
 }
 
 .App {
+  max-width: 1440px;
   padding: 5rem 10rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
