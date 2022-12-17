@@ -10,6 +10,13 @@ $color-neutral-white: #fffdfa;
 $color-neutral-grayish-blue: #c5c6ce;
 $color-neutral-dark-grayish-blue: #5d5f79;
 $color-neutral-very-dark-blue: #00001a;
+
+// Responsive Breakpoints
+$bp-largest: 75em; //1200px
+$bp-large: 62.5rem; //1000px
+$bp-medium: 50rem; //800px
+$bp-small: 37.5em; //600px
+
 *,
 *::after,
 *::before {
@@ -21,6 +28,9 @@ $color-neutral-very-dark-blue: #00001a;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 1rem = 8px
+  }
 }
 
 body {
@@ -36,4 +46,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr;
+    padding: 1rem 3rem;
+  }
 }
