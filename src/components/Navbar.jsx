@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [active, setActive] = useState("navbar__list");
+  const [toggleIcon, setToggleIcon] = useState("navbar__toggler");
+  const navClick = () => {
+    active === "navbar__list"
+      ? setActive("navbar__list navbar__active")
+      : setActive("navbar__list");
+
+    // TogglerIcon Animation
+    toggleIcon === "navbar__toggler"
+      ? setToggleIcon("navbar__toggler toggle")
+      : setToggleIcon("navbar__toggler");
+  };
   return (
     <nav className="navbar">
       <span className="logo">
@@ -12,13 +24,19 @@ const Navbar = () => {
         </svg>
       </span>
 
-      <ul className="navbar__list">
+      <ul className={active}>
         <li>Home</li>
         <li>New</li>
         <li>Popular</li>
         <li>Trending</li>
         <li>Categories</li>
       </ul>
+
+      <div className={toggleIcon} onClick={navClick}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
     </nav>
   );
 };

@@ -13,8 +13,23 @@
     justify-content: space-around;
     gap: 1.5rem;
 
+    // responsive navbar
+
     @media only screen and (max-width: $bp-small) {
-      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100vh;
+      background: $color-neutral-white;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: 0.5s ease-in all;
+
+      font-size: 2rem;
     }
 
     li {
@@ -29,4 +44,40 @@
       }
     }
   }
+
+  &__toggler {
+    cursor: pointer;
+    display: none;
+
+    @media only screen and (max-width: $bp-small) {
+      display: block;
+      position: fixed;
+      top: 4rem;
+      right: 4rem;
+    }
+
+    div {
+      width: 2.5rem;
+      height: 0.2rem;
+      margin: 0.4rem;
+      background: darkgray;
+      transition: 0.4s ease-in all;
+    }
+  }
+
+  /*  Navbar active class  */
+  &__active {
+    transform: translateX(0);
+  }
+}
+
+/* Toggler Icon animation  */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-3px, 4px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-2px, -4px);
 }
