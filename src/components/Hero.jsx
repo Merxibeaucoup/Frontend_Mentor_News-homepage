@@ -12,7 +12,7 @@ const Hero = () => {
       </section>
 
       <section className="hero__web">
-        <h3>The Bright Future Of Web 3?</h3>
+        <h3>The Bright Future Of Web 3.0?</h3>
       </section>
       <section className="hero__words">
         <p>

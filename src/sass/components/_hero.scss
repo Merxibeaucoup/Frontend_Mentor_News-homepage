@@ -5,9 +5,20 @@
   grid-template-columns: repeat(2, 1fr);
   row-gap: 2rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
   &__image {
     grid-column: 1/-1;
     height: 35rem;
+    width: 100%;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 100%;
+      width: 100%;
+    }
 
     img {
       width: 100%;

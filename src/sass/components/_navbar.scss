@@ -13,6 +13,10 @@
     justify-content: space-around;
     gap: 1.5rem;
 
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+
     li {
       color: $color-neutral-dark-grayish-blue;
       padding: 1rem;
