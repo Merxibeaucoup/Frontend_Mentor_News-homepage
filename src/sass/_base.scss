@@ -43,6 +43,8 @@ body {
 .App {
   max-width: 1440px;
   padding: 5rem 10rem;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
